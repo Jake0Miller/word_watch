@@ -86,6 +86,13 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(() => {
 })
 
 
+//https://wordwatch-api.herokuapp.com
+
+// Verb	Path	Body	Response
+// GET	/api/v1/top_word		"{\"word\":{\"sample\":26}}"*
+// POST	/api/v1/words	{ word: { value: "sample" } }	{ message: "sample added!" }
+
+
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
