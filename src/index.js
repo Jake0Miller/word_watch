@@ -4,16 +4,16 @@ $(document).ready(() => {
   getWord();
 
   $('.break').on('click', function() {
-    var times = 20;
-    for(var i=0; i < times; i++){
-      hedgies();
-    }
-    getWord();
-  })
+    let text = $.trim($("textarea").val()).split(' ')
+    text.forEach(word => {
+      hedgies(word);
+    })
+  });
+
+  getWord();
 })
 
-var hedgies = function() {
-  let text = $.trim($("textarea").val())
+var hedgies = function(text) {
   let postBody = { word: { value: text} }
   fetch('https://wordwatch-api.herokuapp.com/api/v1/words', {
     method: 'post',
